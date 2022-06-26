@@ -1,0 +1,20 @@
+<p></p>
+
+<div class="container">
+  <img class="card-img-top" src="https://i.pinimg.com/736x/ab/6c/69/ab6c69b36287628b0eba043827c1c74a.jpg" alt="{my profile photo}" style="width: 18rem;">
+    <h2>resident - details</h2>
+    <div *ngIf=" resident| async as resident">
+      <h3>{{ resident.fullName }}</h3>
+      <b>Id: </b> {{ resident.getId() }}
+      <div>
+        <label>Full Name:</label>
+        <input type="text"  placeholder="name..." />
+      </div>
+  
+      <input #name
+      (keyup.enter)="changeName(name.value)"
+      (blur)="changeName(name.value); name.value='' ">
+        <b></b>
+      <button class="btn btn-secondary" (click)="goBack()" >BACK</button>
+    </div>
+  </div>

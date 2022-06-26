@@ -1,0 +1,46 @@
+
+<div class="container" >
+    <table class="table table-striped">
+        <thead>
+            <th>id</th>
+            <th>full name</th>
+            <th>age</th>
+            <th>is male</th>
+            <th>city</th>
+            <th>address</th>
+            <th>year</th>
+            <th>status</th>
+        </thead>
+  
+        <tbody>
+            <tr *ngFor="let item of dummyDataResidents">
+                <td>{{ item.getId() }}</td>
+                <td>{{ item.fullName }}</td>
+                <td>{{ item.getAge() }}</td>
+                <td>{{ item.isMale }}</td>
+                <td>{{ item.city }}</td>
+                <td>{{ item.address }}</td>
+                <td>{{ item.year }}</td>
+                <td>{{ item.status }}</td>
+  
+                <td>
+           
+                    
+                    <nav>
+                        <a class="btn btn-success" routerLink="/edit" >Edit</a> 
+                        
+                    </nav>
+                   
+                </td>
+  
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        
+    </div>
+
+    
+
+  </div>
