@@ -9,14 +9,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 
 from resident-list:   or from residents button:
-https://github.com/davidshushan/angular/blob/main/city-hall/screens/Screenshot1.jpg?raw=true
-
+![Screenshot1](https://user-images.githubusercontent.com/93195038/175831660-09ded06e-944b-4d62-99f3-9fa6398e5afd.jpg)
 
 
 from root:   or from Home button:
-[Screenshot2.jpg](https://github.com/davidshushan/angular/blob/main/city-hall/screens/Screenshot2.jpg?raw=true)
-
+![Screenshot2](https://user-images.githubusercontent.com/93195038/175831664-587cb30b-7daf-4da5-be26-b60198892d12.jpg)
 
 from residet-edit:
-[Screenshot3.jpg](https://github.com/davidshushan/angular/blob/main/city-hall/screens/Screenshot3.jpg?raw=true)
-
+![Screenshot3](https://user-images.githubusercontent.com/93195038/175831667-ee2266a5-1c79-4418-985f-da48c7af3909.jpg)
