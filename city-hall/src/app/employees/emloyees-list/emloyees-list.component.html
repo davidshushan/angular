@@ -1,0 +1,40 @@
+
+
+<div class="container">
+    <h2 class="text-center">employees list and salary:</h2>
+  
+    <table class="table table-striped">
+        <thead>
+            <th>ID</th>
+            <th>profile</th>
+
+            <th>full Name</th>
+            <th>Age</th>
+            <th>is Male</th>
+            <th>city</th>
+            <th>job Title</th>
+            <th>hours Per Month</th>
+            <th>salary Per Hour</th>
+            <th>salary Per month</th>
+        </thead>
+  
+        <tbody>
+            <tr *ngFor="let emp of emloyees | async">
+                <td>{{ emp.getId() }}</td>
+                <img  src="{{emp.image}}" alt="{my profile photo}" style="width: 80px;">
+                <td>{{ emp.fullName }}</td>
+                <td>{{ emp.age }}</td>
+                <td>{{ emp.isMale }}</td>
+                <td>{{ emp.city }}</td>
+                <td>{{ emp.jobTitle }}</td>
+                <td>{{ emp.hoursPerMonth }}</td>
+                <td>{{ emp.salaryPerHour }}</td>  
+                <td [ngStyle]="{'background-color': emp.salaryPerHour*emp.hoursPerMonth <= 3000? 'red' : 'blue', color:'white'}">{{ emp.salaryPerHour * emp.hoursPerMonth }}</td>  
+
+            </tr>
+        </tbody>
+    </table>
+  
+  </div>
+
+

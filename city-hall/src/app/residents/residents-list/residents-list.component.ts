@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import Resident from '../resident/Resident';
+import Resident from '../Resident';
 import { ResidentService } from 'src/app/services/resident.service';
 import { ActivatedRoute } from "@angular/router";
 import { switchMap } from "rxjs/operators";

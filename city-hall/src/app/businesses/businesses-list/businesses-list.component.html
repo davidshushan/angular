@@ -1,0 +1,30 @@
+<p>businesses-list works!</p>
+
+
+
+<div class="container">
+    <h2 class="text-center">employees list and salary:</h2>
+  
+    <table class="table table-striped">
+        <thead>
+            <th>business Number</th>
+            <th>Job Name</th>
+            <th>number Of Workers</th>
+            <th>average Monthly Profit</th>
+        </thead>
+  
+        <tbody>
+            <tr *ngFor="let emp of businesses | async">
+                <td>{{ emp.getId() }}</td>
+                <td>{{ emp.JobName }}</td>
+                <td>{{ emp.numberOfWorkers }}</td>
+                <td>{{ emp.avgMonthlyProfit }}</td>
+                <td [ngStyle]="{'background-color': emp.avgMonthlyProfit < 5000 ? 'red' : 'blue', color:'white'}">{{ emp.avgMonthlyProfit }}</td>  
+            </tr>
+        </tbody>
+    </table>
+  
+  </div>
+
+
+

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Resident from '../residents/resident/Resident';
+import Resident from '../residents/Resident';
 import { RESIDENTS } from '../residents/dummy-data-residents'; 
 import {Observable, of} from "rxjs";
 import { map } from 'rxjs/operators';

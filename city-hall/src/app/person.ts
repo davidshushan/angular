@@ -1,7 +1,7 @@
 export default class Person {
    
 
-    constructor(private id:number, public fullName:string, private age:number,  public isMale:boolean=false, public city:string="Tel Aviv", public image: string=""  ) {
+    constructor(private id:number, public fullName:string, public age:number,  public isMale:boolean=false, public city:string="Tel Aviv", public image: string=""  ) {
         this.setId(id); 
         this.setAge(age);        
     }

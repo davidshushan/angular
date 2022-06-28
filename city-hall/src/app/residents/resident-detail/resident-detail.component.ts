@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, NgModule, OnInit, Output } from '@angular/core';
 import { Observable } from "rxjs";
-import Resident from '../resident/Resident';
+import Resident from '../Resident';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ResidentService } from 'src/app/services/resident.service';
 import { switchMap } from "rxjs/operators";
+
 
 @Component({
   selector: 'app-resident-detail',
@@ -14,13 +15,15 @@ import { switchMap } from "rxjs/operators";
 export class ResidentDetailComponent implements OnInit {
 
   resident!: Observable<Resident>;
-  _myResident!: Resident;
+  
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private service: ResidentService
-  ) {}
+    private service: ResidentService,)
+    {
+  
+    }
 
   ngOnInit(): void {
     this.resident = this.route.paramMap.pipe(
@@ -28,13 +31,7 @@ export class ResidentDetailComponent implements OnInit {
     );
     
   }
-
-  changeName(newName: string) {
-    if (newName) {
-      // this.resident.setFullName(newName);
-    }
-  }
-
+  
   goBack(){
     this.router.navigate(['/residents-list']);
   }

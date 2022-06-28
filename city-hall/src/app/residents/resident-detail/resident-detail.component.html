@@ -1,20 +1,40 @@
 <p></p>
 
 <div class="container">
-  <img class="card-img-top" src="https://i.pinimg.com/736x/ab/6c/69/ab6c69b36287628b0eba043827c1c74a.jpg" alt="{my profile photo}" style="width: 18rem;">
+  
     <h2>resident - details</h2>
     <div *ngIf=" resident| async as resident">
+      <img class="card-img-top" src="{{resident.image}}" alt="{my profile photo}" style="width: 18rem;">
       <h3>{{ resident.fullName }}</h3>
       <b>Id: </b> {{ resident.getId() }}
+      <br>
+      <b>age:{{resident.age}}</b>
+      <br>
+      <b>City:{{resident.city}}</b>
+      <br>
+      <b>address:{{resident.address}}</b>
+      <br>
+      <b>year:{{resident.year}}</b>
+      <br>
+      <b>status:{{resident.status}}</b>
+
+      
       <div>
-        <label>Full Name:</label>
-        <input type="text"  placeholder="name..." />
+        <br>
+        <b>Full Name:</b>
+        
+        
+        <input style="width: 250px;" type="text" [(ngModel)]='resident.fullName' class='form-control'/>   
       </div>
-  
-      <input #name
-      (keyup.enter)="changeName(name.value)"
-      (blur)="changeName(name.value); name.value='' ">
-        <b></b>
-      <button class="btn btn-secondary" (click)="goBack()" >BACK</button>
+
+      <div>
+        <b>age:</b>
+        <br>
+        
+        <input style="width: 250px;" type="text" [(ngModel)]='resident.age' class='form-control'/>   
+      </div>
+         
     </div>
+    <button class="btn btn-secondary" (click)="goBack()" >BACK</button>
   </div>
+

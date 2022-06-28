@@ -2,10 +2,11 @@
 
 <div class="container">
     <h3>STUDENTS LIST:</h3>
-    <div  *ngFor="let resident of residents | async" class="container" style="display: grid; ">
+ <div style=" display: grid;  grid-template-columns: 1fr 1fr 1fr; ">
+    <ng-container  *ngFor="let resident of residents | async" class="container" style="display: grid; ">
         
-        <div class="card" style="width: 12rem; align-items: center; margin-bottom: 2em; background-color:cadetblue" [routerLink]="['/resident', resident.getId() ]">
-            <img class="card-img-top" src="https://i.pinimg.com/736x/ab/6c/69/ab6c69b36287628b0eba043827c1c74a.jpg" alt="{my profile photo}">
+        <div class="card" style="width: 15rem; align-items: center; margin-bottom: 2em; background-color:cadetblue; display:grid;" [routerLink]="['/resident', resident.getId() ]">
+            <img class="card-img-top" src="{{resident.image}}" alt="{my profile photo}">
             <div class="card-body">
             <b>id: {{ resident.getId() }}</b>
             <br>
@@ -25,17 +26,8 @@
             <button class="btn btn-warning" [routerLink]="['/resident', resident.getId() ]" style="position: absolute; right: 5%;">Edit</button>
             </div>
         </div>  
-    </div>  
-  
+    </ng-container>
+    </div> 
 </div>
 
-<ul class="list-group">
-    <!-- Add async pipe for students array(it is an observable) -->
-    <li *ngFor="let resident of residents | async" class="list-group-item">
-        <!-- localhost:4200/student/:id -->
-        <a>
-            <b>{{ resident.getId() }}</b> {{ resident.fullName }}</a>
-            
-    </li>
-</ul>
 
